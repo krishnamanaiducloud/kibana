@@ -1,0 +1,23 @@
+--- a/node_modules/@kbn/screenshotting-plugin/server/browsers/extract/unzip.js
++++ b/node_modules/@kbn/screenshotting-plugin/server/browsers/extract/unzip.js
+@@ -5,7 +5,7 @@
+   value: true
+ });
+ exports.unzip = unzip;
+-var _extractZip = _interopRequireDefault(require("extract-zip"));
++var _admZip = _interopRequireDefault(require("adm-zip"));
+ var _extract_error = require("./extract_error");
+ /*
+  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
+@@ -16,9 +16,8 @@
+ 
+ async function unzip(filepath, target) {
+   try {
+-    await (0, _extractZip.default)(filepath, {
+-      dir: target
+-    });
++    const zip = new _admZip.default(filepath);
++    await zip.extractAllToAsync(target, /* overwrite */true, /* keepOriginalPermission */true);
+   } catch (err) {
+     throw new _extract_error.ExtractError(err);
+   }

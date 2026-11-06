@@ -1,0 +1,139 @@
+--- a/node_modules/@kbn/observability-plugin/common/locators/alerts.js
++++ b/node_modules/@kbn/observability-plugin/common/locators/alerts.js
+@@ -6,7 +6,7 @@
+ });
+ exports.AlertsLocatorDefinition = exports.ALERTS_PATH = void 0;
+ var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+-var _queryString = require("query-string");
++var _queryString = _interopRequireDefault(require("query-string"));
+ var _rison = _interopRequireDefault(require("@kbn/rison"));
+ var _common = require("@kbn/kibana-utils-plugin/common");
+ var _common2 = require("@kbn/spaces-plugin/common");
+@@ -22,7 +22,7 @@
+ const ALERTS_PATH = exports.ALERTS_PATH = '/app/observability/alerts';
+ function fromQuery(query) {
+   const encodedQuery = _common.url.encodeQuery(query, value => encodeURIComponent(value).replace(/%3A/g, ':'));
+-  return (0, _queryString.stringify)(encodedQuery, {
++  return _queryString.default.stringify(encodedQuery, {
+     sort: false,
+     encode: false
+   });
+--- a/node_modules/@kbn/kibana-utils-plugin/common/state_management/format.js
++++ b/node_modules/@kbn/kibana-utils-plugin/common/state_management/format.js
+@@ -1,11 +1,12 @@
+ "use strict";
+ 
++var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+ Object.defineProperty(exports, "__esModule", {
+   value: true
+ });
+ exports.replaceUrlHashQuery = replaceUrlHashQuery;
+ exports.replaceUrlQuery = replaceUrlQuery;
+-var _queryString = require("query-string");
++var _queryString = _interopRequireDefault(require("query-string"));
+ var _url = require("url");
+ var _parse = require("./parse");
+ var _ = require("..");
+@@ -24,7 +25,7 @@
+   // however `@types/node` says that `url.query` has values of type `string | string[] | undefined`.
+   // After investigating this, it seems that no matter what the values will be of type `string | string[]`
+   const newQuery = queryReplacer(url.query || {});
+-  const searchQueryString = (0, _queryString.stringify)(_.url.encodeQuery(newQuery), {
++  const searchQueryString = _queryString.default.stringify(_.url.encodeQuery(newQuery), {
+     sort: false,
+     encode: false
+   });
+@@ -41,7 +42,7 @@
+   // however `@types/node` says that `url.query` has values of type `string | string[] | undefined`.
+   // After investigating this, it seems that no matter what the values will be of type `string | string[]`
+   const newQuery = queryReplacer((hash === null || hash === void 0 ? void 0 : hash.query) || {});
+-  const searchQueryString = (0, _queryString.stringify)(_.url.encodeQuery(newQuery), {
++  const searchQueryString = _queryString.default.stringify(_.url.encodeQuery(newQuery), {
+     sort: false,
+     encode: false
+   });
+--- a/node_modules/@kbn/kibana-utils-plugin/common/url/encode_uri_query.js
++++ b/node_modules/@kbn/kibana-utils-plugin/common/url/encode_uri_query.js
+@@ -1,11 +1,12 @@
+ "use strict";
+ 
++var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+ Object.defineProperty(exports, "__esModule", {
+   value: true
+ });
+ exports.encodeQuery = exports.addQueryParam = void 0;
+ exports.encodeUriQuery = encodeUriQuery;
+-var _queryString = require("query-string");
++var _queryString = _interopRequireDefault(require("query-string"));
+ var _lodash = require("lodash");
+ /*
+  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
+@@ -46,13 +47,13 @@
+  */
+ exports.encodeQuery = encodeQuery;
+ const addQueryParam = (params, key, value) => {
+-  const queryParams = (0, _queryString.parse)(params);
++  const queryParams = _queryString.default.parse(params);
+   if (value !== undefined) {
+     queryParams[key] = value;
+   } else {
+     delete queryParams[key];
+   }
+-  return (0, _queryString.stringify)(encodeQuery(queryParams, undefined, false), {
++  return _queryString.default.stringify(encodeQuery(queryParams, undefined, false), {
+     sort: false,
+     encode: false
+   });
+--- a/node_modules/@kbn/visualizations-plugin/common/locator_location.js
++++ b/node_modules/@kbn/visualizations-plugin/common/locator_location.js
+@@ -6,7 +6,7 @@
+ });
+ exports.getLocation = getLocation;
+ var _lodash = require("lodash");
+-var _queryString = require("query-string");
++var _queryString = _interopRequireDefault(require("query-string"));
+ var _rison = _interopRequireDefault(require("@kbn/rison"));
+ var _esQuery = require("@kbn/es-query");
+ var _common = require("@kbn/kibana-utils-plugin/common");
+@@ -48,11 +48,11 @@
+       vis
+     }))
+   };
+-  path += `?${(0, _queryString.stringify)(_common.url.encodeQuery(urlState), {
++  path += `?${_queryString.default.stringify(_common.url.encodeQuery(urlState), {
+     encode: false,
+     sort: false
+   })}`;
+-  const otherParams = (0, _queryString.stringify)({
++  const otherParams = _queryString.default.stringify({
+     type: vis === null || vis === void 0 ? void 0 : vis.type,
+     savedSearchId,
+     indexPattern
+--- a/node_modules/@kbn/infra-plugin/common/url_state_storage_service.js
++++ b/node_modules/@kbn/infra-plugin/common/url_state_storage_service.js
+@@ -7,7 +7,7 @@
+ exports.replaceStateKeyInQueryString = exports.replaceLogViewInQueryString = exports.replaceLogPositionInQueryString = exports.replaceLogFilterInQueryString = exports.getTimeRangeStartFromTime = exports.getTimeRangeEndFromTime = exports.defaultLogViewKey = void 0;
+ var _common = require("@kbn/kibana-utils-plugin/common");
+ var _rison = require("@kbn/rison");
+-var _queryString = require("query-string");
++var _queryString = _interopRequireDefault(require("query-string"));
+ var _moment = _interopRequireDefault(require("moment"));
+ var _common2 = require("@kbn/logs-shared-plugin/common");
+ /*
+@@ -33,14 +33,14 @@
+ const replaceLogViewInQueryString = logViewReference => replaceStateKeyInQueryString(defaultLogViewKey, logViewReference);
+ exports.replaceLogViewInQueryString = replaceLogViewInQueryString;
+ const replaceStateKeyInQueryString = (stateKey, urlState) => queryString => {
+-  const previousQueryValues = (0, _queryString.parse)(queryString, {
++  const previousQueryValues = _queryString.default.parse(queryString, {
+     sort: false
+   });
+   const newValue = typeof urlState === 'undefined' ? previousQueryValues : {
+     ...previousQueryValues,
+     [stateKey]: encodeRisonUrlState(urlState)
+   };
+-  return (0, _queryString.stringify)(_common.url.encodeQuery(newValue), {
++  return _queryString.default.stringify(_common.url.encodeQuery(newValue), {
+     sort: false,
+     encode: false
+   });
