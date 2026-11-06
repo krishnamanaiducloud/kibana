@@ -1,0 +1,320 @@
+{
+  "replace": [
+    {
+      "path": "node_modules/@ai-sdk/provider-utils",
+      "name": "@ai-sdk/provider-utils",
+      "version": "3.0.28",
+      "integrity": "sha512-bXlX1WX7E50a2N+AJW+1a/x63m52aPhm+6xYe5THxWrx9vW9NR7E2Ay+1G1ndlCdMdYKo2Fnsd7kBhuyQPaphw=="
+    },
+    {
+      "path": "node_modules/@hapi/content",
+      "name": "@hapi/content",
+      "version": "6.0.3",
+      "integrity": "sha512-ksXemMNZAwPq/mu1a9TZ7LDUSgMR9sexBgpalF3nrP6SM42ARlnBZs58IS5Ay+o4o7y6tFNXL+rMJkQ5ghvCSw=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-cassandra-driver",
+      "name": "@opentelemetry/instrumentation-cassandra-driver",
+      "version": "0.66.0",
+      "integrity": "sha512-4ksN7PfXLg7raDyXIjIrtxxzuuDlUx6Fh0s8VXojdl+nn2o0xkYa9jrq1f9Bfqhm+Sce3GOa1RjE3ycvAwk6Xw=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-knex",
+      "name": "@opentelemetry/instrumentation-knex",
+      "version": "0.65.0",
+      "integrity": "sha512-rJTT12VlDnL6wOWfxnBvkTUIzW2ju+7nqlToMy1tlqL0j6ohlVPxryMCS5h6UqE3CFpq7HtHqVObQHZgrA37KA=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-mongoose",
+      "name": "@opentelemetry/instrumentation-mongoose",
+      "version": "0.67.0",
+      "integrity": "sha512-iEBgNrychD36qI16X/V8WZb2JabjQPE+pyrkLU320ApZyhGVsYU9LH3Nqt4Mkg1nFsa9qWhRQrCfhoANCgT6EA=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-mysql",
+      "name": "@opentelemetry/instrumentation-mysql",
+      "version": "0.67.0",
+      "integrity": "sha512-G4aRrVKcd2Aodqi7WzRZ3LQJNKrM8BpsXEVMHrOb9s8Lg0jZXNvlLY0NWL1yVJrjnqI/unwEsp2aVHkVImPMeA=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-mysql2",
+      "name": "@opentelemetry/instrumentation-mysql2",
+      "version": "0.67.0",
+      "integrity": "sha512-AmviR7l0xMxhC83scY3u+NkkT6blhD/xK9tPi9nYtjNG1gwPtMgZjYOa3f9lGOwpXs/EwN7wiyAgxiO4KTcENA=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-oracledb",
+      "name": "@opentelemetry/instrumentation-oracledb",
+      "version": "0.46.0",
+      "integrity": "sha512-nqxQvbp7HvsVPyDdgiZADPQX6B6ZUtLfm+XPuJHtQ3anxIcqU6qhJlrDIEM2LrZMShqf7bs84RHfDt2rgsp7hg=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-pg",
+      "name": "@opentelemetry/instrumentation-pg",
+      "version": "0.73.0",
+      "integrity": "sha512-yf3tBVwLHB9cZNNPSToNrthx36ouPe4FctFxy7ya6vSJ6gaiKjNfA/IgFFeuBpZflEQhy6aesPqzZo8ZjFkvNg=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-tedious",
+      "name": "@opentelemetry/instrumentation-tedious",
+      "version": "0.40.0",
+      "integrity": "sha512-zTNNxs+KUJf1J+lHzeTDxAIZdVJYvQ8mvGUfyiWcVFgVdl7+4XV+wOBMSd1tZcRRlopfcVODDCOVMx/N7+zvcA=="
+    },
+    {
+      "path": "node_modules/baseline-browser-mapping",
+      "name": "baseline-browser-mapping",
+      "version": "2.11.12",
+      "integrity": "sha512-r7WnVImvVCeFpf2DOXfy41aPWzeNg3H/A2X4dKmy1QL0MSyyk/e7z8ihJ3N6Nn2PsdhkVlqnEfnUE4a05P2aTA=="
+    },
+    {
+      "path": "node_modules/basic-ftp",
+      "name": "basic-ftp",
+      "version": "6.2.1",
+      "integrity": "sha512-bK67isD+lKq46AU8vNtjvMaT2ZqAOAmNCbxUHlFBRD4k15NWxyEjmaKtZPlgce58So4BNTjITGQOVTjL9y0ECA=="
+    },
+    {
+      "path": "node_modules/bn.js",
+      "name": "bn.js",
+      "version": "4.12.3",
+      "integrity": "sha512-fGTi3gxV/23FTYdAoUtLYp6qySe2KE3teyZitipKNRuVYcBkoP/bB3guXN/XVKUe9mxCHXnc9C4ocyz8OmgN0g=="
+    },
+    {
+      "path": "node_modules/decode-uri-component",
+      "name": "decode-uri-component",
+      "version": "0.5.1",
+      "integrity": "sha512-vWHQkXgg2cE3BB4rR0c+PYw9BCQzLoNIRMI7AunIkZst74tw/vpPp7VLoYtsR/cy1f55g3XDWUslfeCZjiZJyA=="
+    },
+    {
+      "path": "node_modules/fast-uri",
+      "name": "fast-uri",
+      "version": "3.1.9",
+      "integrity": "sha512-hS/0Wt3Ya043oKXs0sIxrMpKQITXhMLIrVAKKXi4gozGC9v7YRWVnXIZzjNPTO02M9BdxLCWqK1yRXgNziVyJQ=="
+    },
+    {
+      "path": "node_modules/glob",
+      "name": "glob",
+      "version": "14.0.2",
+      "integrity": "sha512-vfMgTR2djMHPUchsJMLpZlYQvtjVL+mHpEr5wPpoCbQs2vr/FBNK+3Gnl9Ara1DSs4Aeg4eG9HiADb5/rkY/ZA=="
+    },
+    {
+      "path": "node_modules/glob/node_modules/minimatch",
+      "name": "minimatch",
+      "version": "11.0.1",
+      "integrity": "sha512-t+Vn6DX4wPCxS23y03C0uhF7S1jpi1GfqPrnlEipCJaA2ykiNbMkVlDutZtmvLfRcUN6R8AYVlzTsQrT4RZoLQ=="
+    },
+    {
+      "path": "node_modules/joi",
+      "name": "joi",
+      "version": "18.3.1",
+      "integrity": "sha512-mV9M4Llh4va3NT90p7KBtQhoZqjs8xLX7EWYE4y/GG3yLF6REbIBEHSUb0UX1JXRht2w5tiLSsvmpYc5akiqIw=="
+    },
+    {
+      "path": "node_modules/minimatch",
+      "name": "minimatch",
+      "version": "11.0.1",
+      "integrity": "sha512-t+Vn6DX4wPCxS23y03C0uhF7S1jpi1GfqPrnlEipCJaA2ykiNbMkVlDutZtmvLfRcUN6R8AYVlzTsQrT4RZoLQ=="
+    },
+    {
+      "path": "node_modules/nodemailer",
+      "name": "nodemailer",
+      "version": "10.1.4",
+      "integrity": "sha512-EsMnOR2oRv4LGnWvHgcVYkkQ4O2j8KO4WTw6l+PHR4sOXo8SAgIraxtEnGDmotjbhv0hDsu3IuDIFZm8iXwO4A=="
+    },
+    {
+      "path": "node_modules/prismjs",
+      "name": "prismjs",
+      "version": "1.30.0",
+      "integrity": "sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw=="
+    },
+    {
+      "path": "node_modules/systeminformation",
+      "name": "systeminformation",
+      "version": "5.33.16",
+      "integrity": "sha512-R+Lh69IJXfJj6bfyH1In5cIR9FTr4hBS39YvlZHZjsK1p9cuELPq7hplZZIb56ZESMMb+DzdKqqE6Iomi01Mvg=="
+    },
+    {
+      "path": "node_modules/node-forge",
+      "name": "node-forge",
+      "version": "1.4.3",
+      "integrity": "sha512-P6wzfh6t70avmV8FrVEAd/36sOPJQ+hkaJVX1Laap9J/77m7M0eyozDvc8SwnDf4P7MP94gwbAAo0rg3YVXT+g=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-cassandra-driver/node_modules/@opentelemetry/instrumentation",
+      "name": "@opentelemetry/instrumentation",
+      "version": "0.221.0",
+      "integrity": "sha512-cCk80Z/iRDf/5gfsKMB4f74LqVA5yKETB/9ojPzVW/6/f70iu89nJvGxsFCxx4XfSohaOofkU19kiYm84AiAlw=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-knex/node_modules/@opentelemetry/instrumentation",
+      "name": "@opentelemetry/instrumentation",
+      "version": "0.221.0",
+      "integrity": "sha512-cCk80Z/iRDf/5gfsKMB4f74LqVA5yKETB/9ojPzVW/6/f70iu89nJvGxsFCxx4XfSohaOofkU19kiYm84AiAlw=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-mongoose/node_modules/@opentelemetry/instrumentation",
+      "name": "@opentelemetry/instrumentation",
+      "version": "0.221.0",
+      "integrity": "sha512-cCk80Z/iRDf/5gfsKMB4f74LqVA5yKETB/9ojPzVW/6/f70iu89nJvGxsFCxx4XfSohaOofkU19kiYm84AiAlw=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-mysql/node_modules/@opentelemetry/instrumentation",
+      "name": "@opentelemetry/instrumentation",
+      "version": "0.221.0",
+      "integrity": "sha512-cCk80Z/iRDf/5gfsKMB4f74LqVA5yKETB/9ojPzVW/6/f70iu89nJvGxsFCxx4XfSohaOofkU19kiYm84AiAlw=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-mysql2/node_modules/@opentelemetry/instrumentation",
+      "name": "@opentelemetry/instrumentation",
+      "version": "0.221.0",
+      "integrity": "sha512-cCk80Z/iRDf/5gfsKMB4f74LqVA5yKETB/9ojPzVW/6/f70iu89nJvGxsFCxx4XfSohaOofkU19kiYm84AiAlw=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-oracledb/node_modules/@opentelemetry/instrumentation",
+      "name": "@opentelemetry/instrumentation",
+      "version": "0.221.0",
+      "integrity": "sha512-cCk80Z/iRDf/5gfsKMB4f74LqVA5yKETB/9ojPzVW/6/f70iu89nJvGxsFCxx4XfSohaOofkU19kiYm84AiAlw=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-pg/node_modules/@opentelemetry/instrumentation",
+      "name": "@opentelemetry/instrumentation",
+      "version": "0.221.0",
+      "integrity": "sha512-cCk80Z/iRDf/5gfsKMB4f74LqVA5yKETB/9ojPzVW/6/f70iu89nJvGxsFCxx4XfSohaOofkU19kiYm84AiAlw=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-tedious/node_modules/@opentelemetry/instrumentation",
+      "name": "@opentelemetry/instrumentation",
+      "version": "0.221.0",
+      "integrity": "sha512-cCk80Z/iRDf/5gfsKMB4f74LqVA5yKETB/9ojPzVW/6/f70iu89nJvGxsFCxx4XfSohaOofkU19kiYm84AiAlw=="
+    },
+    {
+      "path": "node_modules/glob/node_modules/path-scurry",
+      "name": "path-scurry",
+      "version": "3.0.0",
+      "integrity": "sha512-1pTbQqH1wIwMi/eleQ5leFTTCkzFsPcgXNjwOA8YGGW/W4/kHT3dssE7Z6NH+zuqNLOzOB0uaD61yl7cAcVhgg=="
+    },
+    {
+      "path": "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion",
+      "name": "brace-expansion",
+      "version": "5.0.12",
+      "integrity": "sha512-YovQ3rzhaLMIrDjNDMkNS01tea93qhEhG5xy8f6+R0l+dw3Ki+5sCoIoI942iuLZTHWogWktgwVDhU09iNEimQ=="
+    },
+    {
+      "path": "node_modules/glob/node_modules/minimatch/node_modules/@isaacs/nonrecursive-glob-match",
+      "name": "@isaacs/nonrecursive-glob-match",
+      "version": "1.1.0",
+      "integrity": "sha512-GPm/Dbvk5RLmhRnxXIa7nTpK0xtl4E0wj0MslsuNiJ1FIROU+2+9lgUC/dgF7Ey4QCWhfEsgxilMRMCdHPfDfw=="
+    },
+    {
+      "path": "node_modules/minimatch/node_modules/@isaacs/nonrecursive-glob-match",
+      "name": "@isaacs/nonrecursive-glob-match",
+      "version": "1.1.0",
+      "integrity": "sha512-GPm/Dbvk5RLmhRnxXIa7nTpK0xtl4E0wj0MslsuNiJ1FIROU+2+9lgUC/dgF7Ey4QCWhfEsgxilMRMCdHPfDfw=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-cassandra-driver/node_modules/@opentelemetry/instrumentation/node_modules/require-in-the-middle",
+      "name": "require-in-the-middle",
+      "version": "8.0.1",
+      "integrity": "sha512-QT7FVMXfWOYFbeRBF6nu+I6tr2Tf3u0q8RIEjNob/heKY/nh7drD/k7eeMFmSQgnTtCzLDcCu/XEnpW2wk4xCQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-cassandra-driver/node_modules/@opentelemetry/instrumentation/node_modules/@opentelemetry/api-logs",
+      "name": "@opentelemetry/api-logs",
+      "version": "0.221.0",
+      "integrity": "sha512-OlanaW1vv7ufTqQ3/fPLI4arGt5ZoM+P8abOMki6uEYnpRazepSWDwDnnw+la7kE26SHVC18//SMccrDvLKOXQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-knex/node_modules/@opentelemetry/instrumentation/node_modules/require-in-the-middle",
+      "name": "require-in-the-middle",
+      "version": "8.0.1",
+      "integrity": "sha512-QT7FVMXfWOYFbeRBF6nu+I6tr2Tf3u0q8RIEjNob/heKY/nh7drD/k7eeMFmSQgnTtCzLDcCu/XEnpW2wk4xCQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-knex/node_modules/@opentelemetry/instrumentation/node_modules/@opentelemetry/api-logs",
+      "name": "@opentelemetry/api-logs",
+      "version": "0.221.0",
+      "integrity": "sha512-OlanaW1vv7ufTqQ3/fPLI4arGt5ZoM+P8abOMki6uEYnpRazepSWDwDnnw+la7kE26SHVC18//SMccrDvLKOXQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-mongoose/node_modules/@opentelemetry/instrumentation/node_modules/require-in-the-middle",
+      "name": "require-in-the-middle",
+      "version": "8.0.1",
+      "integrity": "sha512-QT7FVMXfWOYFbeRBF6nu+I6tr2Tf3u0q8RIEjNob/heKY/nh7drD/k7eeMFmSQgnTtCzLDcCu/XEnpW2wk4xCQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-mongoose/node_modules/@opentelemetry/instrumentation/node_modules/@opentelemetry/api-logs",
+      "name": "@opentelemetry/api-logs",
+      "version": "0.221.0",
+      "integrity": "sha512-OlanaW1vv7ufTqQ3/fPLI4arGt5ZoM+P8abOMki6uEYnpRazepSWDwDnnw+la7kE26SHVC18//SMccrDvLKOXQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-mysql/node_modules/@opentelemetry/instrumentation/node_modules/require-in-the-middle",
+      "name": "require-in-the-middle",
+      "version": "8.0.1",
+      "integrity": "sha512-QT7FVMXfWOYFbeRBF6nu+I6tr2Tf3u0q8RIEjNob/heKY/nh7drD/k7eeMFmSQgnTtCzLDcCu/XEnpW2wk4xCQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-mysql/node_modules/@opentelemetry/instrumentation/node_modules/@opentelemetry/api-logs",
+      "name": "@opentelemetry/api-logs",
+      "version": "0.221.0",
+      "integrity": "sha512-OlanaW1vv7ufTqQ3/fPLI4arGt5ZoM+P8abOMki6uEYnpRazepSWDwDnnw+la7kE26SHVC18//SMccrDvLKOXQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-mysql2/node_modules/@opentelemetry/instrumentation/node_modules/require-in-the-middle",
+      "name": "require-in-the-middle",
+      "version": "8.0.1",
+      "integrity": "sha512-QT7FVMXfWOYFbeRBF6nu+I6tr2Tf3u0q8RIEjNob/heKY/nh7drD/k7eeMFmSQgnTtCzLDcCu/XEnpW2wk4xCQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-mysql2/node_modules/@opentelemetry/instrumentation/node_modules/@opentelemetry/api-logs",
+      "name": "@opentelemetry/api-logs",
+      "version": "0.221.0",
+      "integrity": "sha512-OlanaW1vv7ufTqQ3/fPLI4arGt5ZoM+P8abOMki6uEYnpRazepSWDwDnnw+la7kE26SHVC18//SMccrDvLKOXQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-oracledb/node_modules/@opentelemetry/instrumentation/node_modules/require-in-the-middle",
+      "name": "require-in-the-middle",
+      "version": "8.0.1",
+      "integrity": "sha512-QT7FVMXfWOYFbeRBF6nu+I6tr2Tf3u0q8RIEjNob/heKY/nh7drD/k7eeMFmSQgnTtCzLDcCu/XEnpW2wk4xCQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-oracledb/node_modules/@opentelemetry/instrumentation/node_modules/@opentelemetry/api-logs",
+      "name": "@opentelemetry/api-logs",
+      "version": "0.221.0",
+      "integrity": "sha512-OlanaW1vv7ufTqQ3/fPLI4arGt5ZoM+P8abOMki6uEYnpRazepSWDwDnnw+la7kE26SHVC18//SMccrDvLKOXQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-pg/node_modules/@opentelemetry/instrumentation/node_modules/require-in-the-middle",
+      "name": "require-in-the-middle",
+      "version": "8.0.1",
+      "integrity": "sha512-QT7FVMXfWOYFbeRBF6nu+I6tr2Tf3u0q8RIEjNob/heKY/nh7drD/k7eeMFmSQgnTtCzLDcCu/XEnpW2wk4xCQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-pg/node_modules/@opentelemetry/instrumentation/node_modules/@opentelemetry/api-logs",
+      "name": "@opentelemetry/api-logs",
+      "version": "0.221.0",
+      "integrity": "sha512-OlanaW1vv7ufTqQ3/fPLI4arGt5ZoM+P8abOMki6uEYnpRazepSWDwDnnw+la7kE26SHVC18//SMccrDvLKOXQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-tedious/node_modules/@opentelemetry/instrumentation/node_modules/require-in-the-middle",
+      "name": "require-in-the-middle",
+      "version": "8.0.1",
+      "integrity": "sha512-QT7FVMXfWOYFbeRBF6nu+I6tr2Tf3u0q8RIEjNob/heKY/nh7drD/k7eeMFmSQgnTtCzLDcCu/XEnpW2wk4xCQ=="
+    },
+    {
+      "path": "node_modules/@opentelemetry/instrumentation-tedious/node_modules/@opentelemetry/instrumentation/node_modules/@opentelemetry/api-logs",
+      "name": "@opentelemetry/api-logs",
+      "version": "0.221.0",
+      "integrity": "sha512-OlanaW1vv7ufTqQ3/fPLI4arGt5ZoM+P8abOMki6uEYnpRazepSWDwDnnw+la7kE26SHVC18//SMccrDvLKOXQ=="
+    },
+    {
+      "path": "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match",
+      "name": "balanced-match",
+      "version": "4.0.4",
+      "integrity": "sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA=="
+    }
+  ],
+  "remove": [
+    "node_modules/zod-to-json-schema/dist-test-v3",
+    "node_modules/zod-to-json-schema/dist-test-v4"
+  ]
+}
