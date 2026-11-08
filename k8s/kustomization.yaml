@@ -5,5 +5,5 @@ resources:
   - service.yaml
 images:
   - name: docker.io/mohankrishna999/kibana
-    newTag: 8.19.19-patched
+    newTag: 8.19.19.1-patched
 

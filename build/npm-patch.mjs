@@ -1,6 +1,8 @@
 // Replace npm packages inside an unpacked Kibana distribution with pinned, integrity-checked releases.
 // Usage: node npm-patch.mjs <kibana-root> <manifest.json>
-// manifest: { "replace": [{ "path", "name", "version", "integrity" }], "remove": ["node_modules/..."] }
+// manifest: { "replace": [{ "path", "name", "version", "integrity" }],
+//             "edit": [{ "path", "sha256", "why", "replace": [[find, replacement], ...] }], "remove": ["node_modules/..."] }
+// An edit applies only to the exact original file (sha256), and each find string must occur exactly once.
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { createRequire } from 'node:module';
@@ -166,6 +168,19 @@ for (const r of manifest.replace || []) {
   fs.rmSync(tmp, { recursive: true, force: true });
   replaced.add(path.resolve(dest));
   console.log(`replaced ${r.path}: ${old ? old.version : '(new)'} -> ${r.version}`);
+}
+for (const e of manifest.edit || []) {
+  const file = path.join(root, e.path);
+  let text = fs.readFileSync(file, 'utf8');
+  const sum = createHash('sha256').update(text).digest('hex');
+  if (sum !== e.sha256) throw new Error(`edit ${e.path}: sha256 ${sum}, expected ${e.sha256}`);
+  for (const [find, replacement] of e.replace) {
+    const n = text.split(find).length - 1;
+    if (n !== 1) throw new Error(`edit ${e.path}: ${JSON.stringify(find)} occurs ${n} times, expected once`);
+    text = text.replace(find, () => replacement);
+  }
+  fs.writeFileSync(file, text);
+  console.log(`edited ${e.path}: ${e.replace.length} change(s), ${e.why}`);
 }
 for (const p of manifest.remove || []) {
   fs.rmSync(path.join(root, p), { recursive: true, force: true });

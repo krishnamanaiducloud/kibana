@@ -1,6 +1,6 @@
 .PHONY: build smoke scan builder push all
 IMAGENAME=mohankrishna999/kibana
-VERSION=8.19.19-patched
+VERSION=8.19.19.1-patched
 PLATFORMS=linux/amd64,linux/arm64
 BUILDER=securebridge
 build:
