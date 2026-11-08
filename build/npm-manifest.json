@@ -129,8 +129,8 @@
     {
       "path": "node_modules/systeminformation",
       "name": "systeminformation",
-      "version": "5.33.16",
-      "integrity": "sha512-R+Lh69IJXfJj6bfyH1In5cIR9FTr4hBS39YvlZHZjsK1p9cuELPq7hplZZIb56ZESMMb+DzdKqqE6Iomi01Mvg=="
+      "version": "5.33.19",
+      "integrity": "sha512-Zm7wGeCG7PqfvzegMJIzrxICopWqYCeLATVmvxOOci1isLcNVKgY4Fr0hhYQzvc7cgtK3377jQVChTFAnznOiA=="
     },
     {
       "path": "node_modules/node-forge",
@@ -311,10 +311,126 @@
       "name": "balanced-match",
       "version": "4.0.4",
       "integrity": "sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA=="
+    },
+    {
+      "path": "node_modules/@hapi/ammo",
+      "name": "@hapi/ammo",
+      "version": "6.0.2",
+      "integrity": "sha512-YeVEkur58mIJ2wxIuIDGKDgpiNEmLOGswggGarZu/VORUPLBjOUPiaZSl2oFZGECqt3yPSNFBiHTwOQH51U+vA=="
+    },
+    {
+      "path": "node_modules/@hapi/hapi",
+      "name": "@hapi/hapi",
+      "version": "21.4.13",
+      "integrity": "sha512-eupLASu8jIrFvo8yu+xK/C5v2kydqK7v43XIfBtFW4NrJKylud0sEhESoq7oYRe1uxOIiowJAz6mVYmCxC2w1g=="
+    },
+    {
+      "path": "node_modules/@hapi/pez",
+      "name": "@hapi/pez",
+      "version": "6.1.3",
+      "integrity": "sha512-hit/Yb7jYv/rAKDMTJJIhPslxHgt9WxmFfUvZ97rHLsq+HpI6eQE6HbGhFE/fhOHT8llkRETcjJX4+7ut7GF3w=="
+    },
+    {
+      "path": "node_modules/@hapi/shot",
+      "name": "@hapi/shot",
+      "version": "6.0.3",
+      "integrity": "sha512-xKmKONUE5AxUNK+EQCSCz35UpPq4cSy6wRCFvMLCDHdyPeXsmAvwxvU4OemGqpWHtAQHyCPjnDbm/fEU9O6l/w=="
+    },
+    {
+      "path": "node_modules/@hapi/subtext",
+      "name": "@hapi/subtext",
+      "version": "8.1.5",
+      "integrity": "sha512-VSoL75dYqMfs2URprWPu9RXdL/+c5pZ5L0siSa3ZKg0VQKGQn2Yncd05Jl/154VvVYO/ymrOW3TR/a9psp1+kA=="
+    },
+    {
+      "path": "node_modules/@hapi/wreck",
+      "name": "@hapi/wreck",
+      "version": "18.1.3",
+      "integrity": "sha512-PZ1FQpk5DWbEFFYiHu/kCkWeSHwUhAxDSUdv6Zsp1qi2coUP22cnYQlp647KCSsCc4uFB4LOTsHo9f5k7vgtHg=="
+    },
+    {
+      "path": "node_modules/openpgp",
+      "name": "openpgp",
+      "version": "6.3.2",
+      "integrity": "sha512-wcZTzHz41LV8Y48zH/JlD1JT8YdNmpWOuMAjQ/podvvCwsjBEU37K3znJh4UQcj3hksE5z9TzvhbUbwzsGvlLQ=="
+    },
+    {
+      "path": "node_modules/@aws-sdk/core",
+      "name": "@aws-sdk/core",
+      "version": "3.980.1",
+      "integrity": "sha512-W7jDWUPucezIUjFZpr8MudQQtz/m6yPMyAFrOyyQcHjuF4UrZdcCdP8eV1js06U9sH3dxp0AbhN+s9uHwQyXzQ=="
+    },
+    {
+      "path": "node_modules/@aws-sdk/types",
+      "name": "@aws-sdk/types",
+      "version": "3.975.0",
+      "integrity": "sha512-WQlhs6juByzWOzj5fwxOx0mPJaEqMcG/sDpl3Id61B3XhKE63xY+0QWcnG+sWR/sCfprmreyUo1lM7IKZmHMzw=="
+    },
+    {
+      "path": "node_modules/@aws-sdk/xml-builder",
+      "name": "@aws-sdk/xml-builder",
+      "version": "3.972.42",
+      "integrity": "sha512-smX8/gNP8Kjq+CWTBMZQLQ912vOQjiWExzwzvMO+eujPB5RY8IbtF0AGdUUXHKN7KoDWK9dIcuW0WG269kiP6w=="
+    },
+    {
+      "path": "node_modules/@smithy/core",
+      "name": "@smithy/core",
+      "version": "3.39.0",
+      "integrity": "sha512-JJ/46AWQ4ipS1N2eZmUj7yzIhH8NhQIfAE+dce7NSB6dmFh+7hvD4pbofcoT4I0Xzfy/LNhZx3V2QhwYyAiqdg=="
+    },
+    {
+      "path": "node_modules/@smithy/signature-v4",
+      "name": "@smithy/signature-v4",
+      "version": "5.7.5",
+      "integrity": "sha512-WPjdr5oWOk1LArpI4pavu+fSo+/evi0Re1olxGvqwuZopd4gYR1UGCi+Soyn/IjmafqbWs+ZC+3AKxJS3ZpwUg=="
+    },
+    {
+      "path": "node_modules/@smithy/types",
+      "name": "@smithy/types",
+      "version": "4.20.0",
+      "integrity": "sha512-lCA6QG22dPk9ecHbv91jDQZsmtPUjdS1aE2Il6NNPqe7DrYc0dZQi6DhcESk2KYXH2sp5xbAcGdYMZDFnuzA2A=="
     }
   ],
   "remove": [
     "node_modules/zod-to-json-schema/dist-test-v3",
-    "node_modules/zod-to-json-schema/dist-test-v4"
+    "node_modules/zod-to-json-schema/dist-test-v4",
+    "node_modules/rimraf",
+    "node_modules/inflight"
+  ],
+  "edit": [
+    {
+      "path": "node_modules/del/index.js",
+      "sha256": "04e820c86f88eb014531345ab22c2ba215c5431342b99409e4b4611d53dfd48a",
+      "why": "rimraf 3 replaced by fs.rm",
+      "replace": [
+        [
+          "const rimraf = require('rimraf');",
+          "const fs = require('fs');"
+        ],
+        [
+          "const rimrafP = promisify(rimraf);",
+          "// rimraf 3 (unsupported) is replaced by the recursive fs.rm of Node.js, which deletes the same way.\nconst rmOptions = {recursive: true, force: true, maxRetries: 3};\nconst rimrafP = file => fs.promises.rm(file, rmOptions);"
+        ],
+        [
+          "await rimrafP(file, rimrafOptions);",
+          "await rimrafP(file);"
+        ],
+        [
+          "rimraf.sync(file, rimrafOptions);",
+          "fs.rmSync(file, rmOptions);"
+        ]
+      ]
+    },
+    {
+      "path": "node_modules/del/package.json",
+      "sha256": "b27076f8a47b7d038125defc1dae903b963b74f0d8634d92a519bf76b9cc83f2",
+      "why": "del no longer requires rimraf",
+      "replace": [
+        [
+          "\t\t\"rimraf\": \"^3.0.2\",\n",
+          ""
+        ]
+      ]
+    }
   ]
 }

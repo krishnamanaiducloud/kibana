@@ -65,7 +65,7 @@ RUN node -e "const fs=require('fs');const f='/usr/share/kibana/package.json';con
     && find /usr/share/kibana -gid 0 -not -type l -not -perm /g+w -exec chmod g+w {} + \
     && find / -xdev -perm -4000 -exec chmod u-s {} +
 LABEL org.opencontainers.image.title="Kibana" \
-      org.opencontainers.image.version="${KIBANA_VERSION}-patched" \
+      org.opencontainers.image.version="${KIBANA_VERSION}.1-patched" \
       org.opencontainers.image.source="https://github.com/elastic/kibana" \
       org.opencontainers.image.licenses="Elastic-2.0 OR AGPL-3.0-only"
 USER 1000:0
