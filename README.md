@@ -6,11 +6,23 @@ and npm packages with known vulnerabilities are replaced by fixed releases from 
 each pinned by integrity hash in `build/npm-manifest.json`. The build fails if any replaced package
 is left with an unmet dependency. Two small changes from Kibana 8.19.24 are applied (`build/patches/`): Reporting's Chromium extraction uses adm-zip instead of the unmaintained extract-zip, and query-string call sites use the default export of query-string 9.
 
-Published as `mohankrishna999/kibana:8.19.19.1-patched` for amd64 and arm64.
+Published as `mohankrishna999/kibana:8.19.19.2-patched` for amd64 and arm64.
 
 The image preserves the standard `/usr/share/kibana` layout, `kibana-docker` environment
-translation, UID 1000 and port 5601. Primary GID 0 and group-writable paths support OpenShift
+translation, `curl`, UID 1000 and port 5601. Primary GID 0 and group-writable paths support OpenShift
 arbitrary UIDs.
+
+## 8.19.19.2-patched
+
+- `nodemailer` 10.1.4 to 10.5.0.
+- `@opentelemetry/sdk-trace-base` 2.8.0 to 2.12.1, with private, version-aligned `core`,
+  `resources` and `sdk-trace` 2.12.1 dependencies.
+- `fast-xml-parser` 5.7.0 to 5.12.0, used by the AWS SDK's XML protocol. 5.12.0 fixes
+  GHSA-474x-hrwr-fgx4, published in November 2026. Also raised: `fast-xml-builder` 1.3.1,
+  `path-expression-matcher` 1.6.2, and its own `@nodable/entities` 3.1.0 and `xml-naming` 0.3.0.
+  `is-unsafe` 2.0.3 is added. 5.12.0 requires all of these.
+- `curl` is installed, as in Elastic's image; `8.19.19-patched` and `8.19.19.1-patched` left it out.
+  Health checks such as the ones in Elastic's Docker Compose examples call it.
 
 ## 8.19.19.1-patched
 

@@ -1,5 +1,44 @@
 {
+  "minimumVersions": {
+    "nodemailer": "10.4.1",
+    "hono": "4.13.16",
+    "@opentelemetry/sdk-trace-base": "2.12.1"
+  },
   "replace": [
+    {
+      "all": true,
+      "name": "hono",
+      "version": "4.13.17",
+      "integrity": "sha512-vZIcbkvjOR5hHRWERbGkr8fGfF0GGM1ooYkuH448iO3b2AdVEr3AXZSw4Z3Kn+1L5z0CVoVeyV29VGYmFh05kQ=="
+    },
+    {
+      "all": true,
+      "name": "@opentelemetry/sdk-trace-base",
+      "version": "2.12.1",
+      "integrity": "sha512-CMrcqFxTikYmYQCuHToBO4kQvWIseRk2ztzWidTd7VutIxj1rljvJZCZnFPJEGNOS7FvaSmRL21Jeuu3/wrCAQ==",
+      "children": [
+        {
+          "name": "@opentelemetry/core",
+          "version": "2.12.1",
+          "integrity": "sha512-3hr6Pj0/G0oVgIGb97IVcw9BjZ6eudonKjrmQxw7JquyU/XmVbJelkmyoU0sT/OvHGkv+r1tcrwv8MbSX7aKHw=="
+        },
+        {
+          "name": "@opentelemetry/resources",
+          "version": "2.12.1",
+          "integrity": "sha512-IwrNcuLCvnJAnNLkXxx0Uw+rjBkVW6VGQrhd7PanNf0LavOzkTk9sDAjdqegM7p/VdxefNRrii6d+wBRJfz35g=="
+        },
+        {
+          "name": "@opentelemetry/sdk-trace",
+          "version": "2.12.1",
+          "integrity": "sha512-vANdmCYnn+Ka/alBKxwICMl4Koa+aQBlRC9zAZy+Ig1Obbo3RZt2oiyv+8/gET5rrBBYrO3YniPcXfwZrN01rg=="
+        },
+        {
+          "name": "@opentelemetry/semantic-conventions",
+          "version": "1.41.1",
+          "integrity": "sha512-/UhIkaZgPutTFmQ7RnIJGgDXZmtEJ7Dvi86xNTFWcnRxVRNk/aotsqDJYeEvDP+FSMB2SdW+pQzNMcWP0rwuNA=="
+        }
+      ]
+    },
     {
       "path": "node_modules/@ai-sdk/provider-utils",
       "name": "@ai-sdk/provider-utils",
@@ -141,8 +180,8 @@
     {
       "path": "node_modules/fast-xml-parser",
       "name": "fast-xml-parser",
-      "version": "5.7.0",
-      "integrity": "sha512-MTcrUoRQ1GSQ9iG3QJzBGquYYYeA7piZaJoIWbPFGbRn6Jj6z7xgoAyi4DrZX4y2ZIQQBF59gc/zmvvejjgoFQ=="
+      "version": "5.12.0",
+      "integrity": "sha512-/pXxRBtwxY9w8z7YbgsvIPPcPvFDsTbIkWwTQJhzNJPokj+TbN6ftmcv4j/pEQDvOCNnKGDzuk5Bo2oogIOiFg=="
     },
     {
       "path": "node_modules/follow-redirects",
@@ -229,10 +268,10 @@
       "integrity": "sha512-vIYxrBCC/N/K+Js3qSN88go7kIfNPssr/hHCesKCQNAjmgvYS2oqr69kIufEG+O4+PfezOH4EbIeHCfFov8ZgQ=="
     },
     {
-      "path": "node_modules/nodemailer",
+      "all": true,
       "name": "nodemailer",
-      "version": "10.1.4",
-      "integrity": "sha512-EsMnOR2oRv4LGnWvHgcVYkkQ4O2j8KO4WTw6l+PHR4sOXo8SAgIraxtEnGDmotjbhv0hDsu3IuDIFZm8iXwO4A=="
+      "version": "10.5.0",
+      "integrity": "sha512-L/w/HH5MqpzMDuZD7fQdt/+KqymuvrpaApaIjAH2XA3ILePwlcvXCVVvP75xVrXCEt2ggK2marrrHHFB5Qu0kA=="
     },
     {
       "path": "node_modules/piscina",
@@ -376,8 +415,8 @@
     {
       "path": "node_modules/fast-xml-parser/node_modules/@nodable/entities",
       "name": "@nodable/entities",
-      "version": "2.2.0",
-      "integrity": "sha512-9uGyhaQavEUMC8AIddIjau4NsnsXhou+j5sBAGojCM1oxmQpVKTWR/9JxABD6UAv12vpIms55fPZKFQEhG6uBg=="
+      "version": "3.1.0",
+      "integrity": "sha512-LsS/DjHr+uDM647Gru/cA8+J3a3HfhttwCKLyuoyN7yXTFCxKBtSgMQBvrW9yNPa2/zDRUNuGPaH5QUFoa4arQ=="
     },
     {
       "path": "node_modules/glob/node_modules/path-scurry",
@@ -630,6 +669,36 @@
       "name": "@smithy/types",
       "version": "4.20.0",
       "integrity": "sha512-lCA6QG22dPk9ecHbv91jDQZsmtPUjdS1aE2Il6NNPqe7DrYc0dZQi6DhcESk2KYXH2sp5xbAcGdYMZDFnuzA2A=="
+    },
+    {
+      "path": "node_modules/fast-xml-builder",
+      "name": "fast-xml-builder",
+      "version": "1.3.1",
+      "integrity": "sha512-pIM/1n3ntFXKYrUZwW7QCK0gAW7XY+wzj1YMIV3tLDvPj/V+zTGJK5e3/4WJfwj0qWw2ElNXiTixda/R+3YSug=="
+    },
+    {
+      "path": "node_modules/fast-xml-builder/node_modules/xml-naming",
+      "name": "xml-naming",
+      "version": "0.3.0",
+      "integrity": "sha512-ghig2TBE/H11aOVgmahA3MhimvkBr6JIYknH/Dhdk10nXwdbIqBJsbfMxpvFPG8bAw77gN29aQWvKpmVoPlvPQ=="
+    },
+    {
+      "path": "node_modules/fast-xml-parser/node_modules/xml-naming",
+      "name": "xml-naming",
+      "version": "0.3.0",
+      "integrity": "sha512-ghig2TBE/H11aOVgmahA3MhimvkBr6JIYknH/Dhdk10nXwdbIqBJsbfMxpvFPG8bAw77gN29aQWvKpmVoPlvPQ=="
+    },
+    {
+      "path": "node_modules/is-unsafe",
+      "name": "is-unsafe",
+      "version": "2.0.3",
+      "integrity": "sha512-ZBllczCCO267vgdFb6Tq3pv+LhHaCiGMdr+ZsuL+OopruAg7S+3ZDs1vD0RPC0uSrkjzbraxaGjtX1YBxjPeFQ=="
+    },
+    {
+      "path": "node_modules/path-expression-matcher",
+      "name": "path-expression-matcher",
+      "version": "1.6.2",
+      "integrity": "sha512-enSlaiat05iasnzmgNxRj8reFdj3puY2QpNgP1aPIaVfT6nn9ICuPoFlKHk8EN22HcwewshO+mN2DGbkCEOtqQ=="
     }
   ],
   "remove": [

@@ -37,14 +37,13 @@ RUN if [ -d /work/build/patches ]; then \
     fi \
     && rm -rf /out/node \
     && mkdir -p /out/node/glibc-217/bin \
-    && ln -s /usr/bin/node /out/node/glibc-217/bin/node \
-    && chmod -R g=u /out
+    && ln -s /usr/bin/node /out/node/glibc-217/bin/node
 
 FROM ${WOLFI_IMAGE}
 ARG KIBANA_VERSION=8.19.19
 ARG APK_REPOSITORY
-RUN --mount=type=bind,source=build/apk-install.sh,target=/tmp/apk-install.sh \
-    sh /tmp/apk-install.sh bash ca-certificates findutils font-liberation fontconfig libnss libstdc++ nodejs-24 shadow tini \
+RUN --mount=type=bind,source=build/apk-install-runtime.sh,target=/tmp/apk-install.sh \
+    sh /tmp/apk-install.sh bash ca-certificates curl findutils font-liberation fontconfig libnss libstdc++ nodejs-24 shadow tini \
     && test -x /usr/bin/node && test -x /sbin/tini \
     && groupadd --gid 1000 kibana \
     && useradd --uid 1000 --gid 1000 -G 0 --home-dir /usr/share/kibana --no-create-home kibana
@@ -65,7 +64,7 @@ RUN node -e "const fs=require('fs');const f='/usr/share/kibana/package.json';con
     && find /usr/share/kibana -gid 0 -not -type l -not -perm /g+w -exec chmod g+w {} + \
     && find / -xdev -perm -4000 -exec chmod u-s {} +
 LABEL org.opencontainers.image.title="Kibana" \
-      org.opencontainers.image.version="${KIBANA_VERSION}.1-patched" \
+      org.opencontainers.image.version="${KIBANA_VERSION}.2-patched" \
       org.opencontainers.image.source="https://github.com/elastic/kibana" \
       org.opencontainers.image.licenses="Elastic-2.0 OR AGPL-3.0-only"
 USER 1000:0
