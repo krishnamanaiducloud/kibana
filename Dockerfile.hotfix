@@ -1,0 +1,11 @@
+# syntax=docker/dockerfile:1.7
+ARG SOURCE_IMAGE=docker.io/mohankrishna999/kibana:8.19.24.1-patched@sha256:df47c13c83e784edd72cb95b340c7b0aa16109e4a30846f2925497c6b91a0f65
+FROM ${SOURCE_IMAGE}
+USER 0
+COPY --chown=0:0 --chmod=0555 build/npm-patch.mjs /work/npm-patch.mjs
+COPY --chown=0:0 --chmod=0444 build/npm-hotfix-manifest.json /work/npm-hotfix-manifest.json
+RUN --mount=type=cache,id=kibana-npm-hotfix,target=/tmp/npm-patch-cache,sharing=locked \
+    node /work/npm-patch.mjs /usr/share/kibana /work/npm-hotfix-manifest.json \
+    && rm -rf /work/npm-patch.mjs /work/npm-hotfix-manifest.json
+LABEL org.opencontainers.image.version="8.19.24.2-patched"
+USER 1000:0

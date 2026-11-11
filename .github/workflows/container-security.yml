@@ -19,7 +19,8 @@ jobs:
       - name: Trivy scan
         uses: aquasecurity/trivy-action@v0.36.0
         with:
-          image-ref: mohankrishna999/kibana:8.19.24.1-patched
+          version: v0.76.2
+          image-ref: mohankrishna999/kibana:8.19.24.2-patched
           scanners: vuln
           vuln-type: os,library
           severity: UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL
@@ -28,7 +29,7 @@ jobs:
       - name: Grype scan
         uses: anchore/scan-action@v7
         with:
-          image: mohankrishna999/kibana:8.19.24.1-patched
+          image: mohankrishna999/kibana:8.19.24.2-patched
           fail-build: true
           severity-cutoff: negligible
 

@@ -6,11 +6,22 @@ and npm packages with known vulnerabilities are replaced by fixed releases from 
 each pinned by integrity hash in `build/npm-manifest.json`. The build fails if any replaced package
 is left with an unmet dependency.
 
-Published as `mohankrishna999/kibana:8.19.24.1-patched` for amd64 and arm64.
+Published as `mohankrishna999/kibana:8.19.24.2-patched` for amd64 and arm64.
 
 The image preserves the standard `/usr/share/kibana` layout, `kibana-docker` environment
-translation, UID 1000 and port 5601. Primary GID 0 and group-writable paths support OpenShift
+translation, `curl`, UID 1000 and port 5601. Primary GID 0 and group-writable paths support OpenShift
 arbitrary UIDs.
+
+## 8.19.24.2-patched
+
+- `nodemailer` 10.1.4 to 10.5.0.
+- All four installed `@opentelemetry/sdk-trace-base` copies (2.8.0 and 2.9.0) to 2.12.1,
+  each with private, version-aligned `core`, `resources` and `sdk-trace` 2.12.1 dependencies.
+- `basic-ftp` 6.2.1 to 6.2.6. It is used by `get-uri` for `ftp://` proxy auto-config URLs.
+  6.2.2 to 6.2.6 fix four advisories published in October and November 2026:
+  GHSA-5rfr-xx34-2xxv, GHSA-r4jh-29pc-gfqr, GHSA-5pm8-86m8-9m6r and GHSA-2w5v-vj22-jp27.
+- `curl` is installed, as in Elastic's image; `8.19.24-patched` and `8.19.24.1-patched` left it out.
+  Health checks such as the ones in Elastic's Docker Compose examples call it.
 
 ## 8.19.24.1-patched
 

@@ -20,7 +20,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: kibana
-          image: docker.io/mohankrishna999/kibana:8.19.24.1-patched
+          image: docker.io/mohankrishna999/kibana:8.19.24.2-patched
           env:
             - name: ELASTICSEARCH_HOSTS
               value: '["http://elasticsearch:9200"]'
