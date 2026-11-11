@@ -1,4 +1,9 @@
 {
+  "minimumVersions": {
+    "nodemailer": "10.4.1",
+    "hono": "4.13.16",
+    "@opentelemetry/sdk-trace-base": "2.12.1"
+  },
   "replace": [
     {
       "path": "node_modules/@ai-sdk/provider-utils",
@@ -47,6 +52,40 @@
       "name": "@hono/node-server",
       "version": "2.1.6",
       "integrity": "sha512-p/KH9MnfNcsm3sR6x4lNgm5j+QN4Et8srKredl9DZfXiyZ1UQ3aQ2YVpFLbqktYN5JI+DB+VZFKM2PqE5hLKjQ=="
+    },
+    {
+      "all": true,
+      "name": "hono",
+      "version": "4.13.17",
+      "integrity": "sha512-vZIcbkvjOR5hHRWERbGkr8fGfF0GGM1ooYkuH448iO3b2AdVEr3AXZSw4Z3Kn+1L5z0CVoVeyV29VGYmFh05kQ=="
+    },
+    {
+      "all": true,
+      "name": "@opentelemetry/sdk-trace-base",
+      "version": "2.12.1",
+      "integrity": "sha512-CMrcqFxTikYmYQCuHToBO4kQvWIseRk2ztzWidTd7VutIxj1rljvJZCZnFPJEGNOS7FvaSmRL21Jeuu3/wrCAQ==",
+      "children": [
+        {
+          "name": "@opentelemetry/core",
+          "version": "2.12.1",
+          "integrity": "sha512-3hr6Pj0/G0oVgIGb97IVcw9BjZ6eudonKjrmQxw7JquyU/XmVbJelkmyoU0sT/OvHGkv+r1tcrwv8MbSX7aKHw=="
+        },
+        {
+          "name": "@opentelemetry/resources",
+          "version": "2.12.1",
+          "integrity": "sha512-IwrNcuLCvnJAnNLkXxx0Uw+rjBkVW6VGQrhd7PanNf0LavOzkTk9sDAjdqegM7p/VdxefNRrii6d+wBRJfz35g=="
+        },
+        {
+          "name": "@opentelemetry/sdk-trace",
+          "version": "2.12.1",
+          "integrity": "sha512-vANdmCYnn+Ka/alBKxwICMl4Koa+aQBlRC9zAZy+Ig1Obbo3RZt2oiyv+8/gET5rrBBYrO3YniPcXfwZrN01rg=="
+        },
+        {
+          "name": "@opentelemetry/semantic-conventions",
+          "version": "1.41.1",
+          "integrity": "sha512-/UhIkaZgPutTFmQ7RnIJGgDXZmtEJ7Dvi86xNTFWcnRxVRNk/aotsqDJYeEvDP+FSMB2SdW+pQzNMcWP0rwuNA=="
+        }
+      ]
     },
     {
       "path": "node_modules/@isaacs/nonrecursive-glob-match",
@@ -307,10 +346,10 @@
       "integrity": "sha512-P6wzfh6t70avmV8FrVEAd/36sOPJQ+hkaJVX1Laap9J/77m7M0eyozDvc8SwnDf4P7MP94gwbAAo0rg3YVXT+g=="
     },
     {
-      "path": "node_modules/nodemailer",
+      "all": true,
       "name": "nodemailer",
-      "version": "10.1.4",
-      "integrity": "sha512-EsMnOR2oRv4LGnWvHgcVYkkQ4O2j8KO4WTw6l+PHR4sOXo8SAgIraxtEnGDmotjbhv0hDsu3IuDIFZm8iXwO4A=="
+      "version": "10.5.0",
+      "integrity": "sha512-L/w/HH5MqpzMDuZD7fQdt/+KqymuvrpaApaIjAH2XA3ILePwlcvXCVVvP75xVrXCEt2ggK2marrrHHFB5Qu0kA=="
     },
     {
       "path": "node_modules/openpgp",

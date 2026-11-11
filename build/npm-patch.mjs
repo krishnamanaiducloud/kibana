@@ -141,8 +141,32 @@ function fetchTarball(name, version, integrity) {
 
 const baseline = new Set(listPackages(root).flatMap(problemsOf).map(key));
 
+// Expand an `all` replacement to every installed copy of that package. Optional
+// children are installed below each copy, giving tightly-coupled packages (such
+// as the OpenTelemetry SDK) a self-contained, version-aligned dependency set.
+const replacementPlans = [];
+for (const source of manifest.replace || []) {
+  const targets = source.all
+    ? listPackages(root)
+        .filter((dir) => readPkg(dir)?.name === source.name)
+        .map((dir) => ({ ...source, path: rel(dir) }))
+    : [source];
+  console.log(`${source.name}@${source.version}: ${targets.length} replacement target(s)`);
+  for (const target of targets) {
+    const { all, children = [], ...replacement } = target;
+    replacementPlans.push(replacement);
+    for (const child of children) {
+      replacementPlans.push({
+        ...child,
+        path: path.posix.join(replacement.path, 'node_modules', child.name),
+        fresh: true,
+      });
+    }
+  }
+}
+
 const replaced = new Set();
-for (const r of manifest.replace || []) {
+for (const r of replacementPlans) {
   const dest = path.join(root, r.path);
   const tgz = fetchTarball(r.name, r.version, r.integrity);
   const tmp = fs.mkdtempSync(path.join(work, 'x-'));
@@ -191,6 +215,14 @@ pkgCache.clear();
 // Strict: packages we installed must have every runtime dependency satisfied.
 // Dependents whose declared range a deliberate security upgrade exceeds are reported as overrides.
 let failed = false;
+for (const dir of listPackages(root)) {
+  const pkg = readPkg(dir);
+  const minimum = manifest.minimumVersions?.[pkg.name];
+  if (minimum && (!semver.valid(pkg.version) || semver.lt(pkg.version, minimum))) {
+    console.error(`BELOW SECURITY FLOOR: ${rel(dir)} has ${pkg.name}@${pkg.version}, requires >=${minimum}`);
+    failed = true;
+  }
+}
 for (const pr of listPackages(root).flatMap(problemsOf)) {
   const k = key(pr);
   if (replaced.has(path.resolve(pr.from))) {

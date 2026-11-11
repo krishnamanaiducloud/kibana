@@ -6,13 +6,13 @@ and npm packages with known vulnerabilities are replaced by fixed releases from 
 each pinned by integrity hash in `build/npm-manifest.json`. The build fails if any replaced package
 is left with an unmet dependency.
 
-Published as `mohankrishna999/kibana:9.5.6.1-patched` for amd64 and arm64.
+Published as `mohankrishna999/kibana:9.5.6.2-patched` for amd64 and arm64.
 
 The image follows Elastic's Docker image: the standard `/usr/share/kibana` layout, `kibana-docker`
 environment translation, `tini` as init, `curl` for health checks, UID 1000 and port 5601. Primary
 GID 0 and group-writable paths support OpenShift arbitrary UIDs.
 
-## 9.5.6.1-patched
+## 9.5.6.2-patched
 
 Earlier `9.5.6-patched` images were built from source. This release is built the same way as the
 8.19 images: Elastic's release archive with the npm changes below.
@@ -24,6 +24,9 @@ npm package changes in `build/npm-manifest.json`:
   - `@hapi/content` 6.0.2 to 6.0.3.
   - `@hono/node-server` 1.19.17 to 2.1.6. The MCP SDK accepts `^1.19.9 || ^2.0.5`; 2.x keeps
     the same API.
+  - `hono` 4.13.13 to 4.13.17.
+  - Every installed `@opentelemetry/sdk-trace-base` copy (2.8.0 through 2.11.0) to 2.12.1,
+    each with private, version-aligned `core`, `resources` and `sdk-trace` 2.12.1 dependencies.
   - The OpenTelemetry instrumentations for Cassandra, Knex, Mongoose, MySQL, MySQL2, OracleDB, pg
     and Tedious, one minor release each. Each one also gets its own `@opentelemetry/instrumentation`
     0.221.0, which it requires.
@@ -38,7 +41,7 @@ npm package changes in `build/npm-manifest.json`:
   - `minimatch` 10.2.4 to 11.0.1, and `just-bash`'s copy from 10.2.6 to 11.0.1. `just-bash`
     calls `minimatch(path, pattern)` for `ls` globs, which works the same in 11.
   - `node-forge` 1.4.0 to 1.4.3.
-  - `nodemailer` 10.0.16 to 10.1.4.
+  - `nodemailer` 10.0.16 to 10.5.0.
   - `prismjs` 1.27.0 to 1.30.0, used by `refractor` for code highlighting.
   - `re2js` 2.8.5 to 2.8.7, used by Timelion's `label()`.
   - `smol-toml` 1.8.0 to 1.9.1.
@@ -90,7 +93,7 @@ Verified on the built image, side by side with Elastic's `kibana:9.5.6`:
   - The Bedrock runtime client sends a SigV4-signed request and reads the response.
   - `del` deletes a tree and a glob, and ignores a missing path.
 - **Kibana itself:**
-  - Kibana starts against Elasticsearch 9.5.6.1-patched and serves Home and Discover at desktop and
+  - Kibana starts against Elasticsearch 9.5.6.2-patched and serves Home and Discover at desktop and
     phone widths, with renders identical to Elastic's image.
   - It logs no error that Elastic's image does not also log.
   - It starts over HTTPS with a PKCS#12 keystore.
